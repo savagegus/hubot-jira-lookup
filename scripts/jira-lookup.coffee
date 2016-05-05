@@ -135,8 +135,6 @@ reportIssue = (robot, msg, issue) ->
       .headers(Authorization: auth, Accept: 'application/json')
       .get() (err, res, body) ->
         try
-          robot.logger.debug "Json: #{body}"
-
           json = JSON.parse(body)
 
           data = {
